@@ -14,13 +14,15 @@
 <body>
     <header>
         <div class="container-header">
+            <i id="menu" class="fas fa-bars" onclick="showMenu()"></i>
             <a href="../index.html"><img class="logo" src="../img/Logo.svg" alt="Logo"></a>
-            <ul class="links-header">
+            <ul id="links-menu" class="links-header">
                 <li><a href="./caracteristicas.html">Características</a></li>
                 <li><a href="./precios.html">Precios</a></li>
                 <li><a href="./contacto.html">Contacto</a></li>
             </ul>
-            <div class="buttons-header">
+            <i id="user" class="fas fa-user" onclick="showButtons()"></i>
+            <div id="buttons-menu" class="buttons-header">
                 <a class="btn green" href="./login.html">Acceder</a>
                 <a class="btn dark" href="./sign-up.html">Registrarse</a>
             </div>
@@ -76,6 +78,7 @@
         </div>
     </footer>
 
+    <script src="../js/navbar.js"></script>
 </body>
 
 </html>

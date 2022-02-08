@@ -992,7 +992,8 @@ props anteriores*/
 
     /*----------HOME-----------*/
 
-    html, body {
+    html,
+    body {
         overflow-x: hidden;
     }
 
@@ -1101,13 +1102,10 @@ props anteriores*/
         width: 6em;
     }
 
-
     .sm-hide {
         display: none;
     }
 
-
-    
     /*-----Download section---------*/
     #download {
         display: flex;
@@ -1125,7 +1123,6 @@ props anteriores*/
     .xl {
         width: 11em;
     }
-
 
     #download img {
         display: none;
@@ -1176,11 +1173,7 @@ props anteriores*/
         font-size: 1.2em;
     }
 
-
     /*--------------------------------- PRICING ---------------------------------------*/
-    .pricing {
-        
-    }
 
     .banner-pricing {
         margin-top: 3em;
@@ -1206,7 +1199,7 @@ props anteriores*/
     .grid-pricing {
         display: flex;
         flex-direction: column;
-        z-index: 2000;
+        z-index: 20;
         width: 100%;
         justify-content: center;
         align-items: center;
@@ -1236,4 +1229,89 @@ props anteriores*/
         gap: 1em;
     }
 
+    /*--------------------------------- LOGIN ---------------------------------------*/
+    #grid-form {
+        margin-top: 3em;
+        grid-template-columns: 1fr;
+        min-height: 95vh;
+    }
+
+    .background-50 {
+        display: none;
+    }
+
+    .container-sign {
+        width: 75%;
+    }
+
+    /*--------------------------------- CONTACTO ---------------------------------------*/
+
+    #contacto {
+        margin-top: 3em;
+    }
+
+    .container-contacto {
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-card {
+        width: 95%;
+    }
+
+    .contact-card {
+        width: 95%;
+        margin-top: 1em;
+    }
+
+    /*--------------------------------- CARACTERÍSTICAS ---------------------------------------*/
+
+    #caracteristicas {
+        margin-top: 5em;
+    }
+
+    .grid-50 {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        width: 85%;
+    }
+
+    .text-features {
+        text-align: center;
+        align-items: center;
+        width: 100%;
+
+    }
+
+    .text-features h3 {
+        font-size: 2.2rem;
+        width: 100%;
+    }
+
+    .text-features h6 {
+        width: 95%;
+    }
+
+    #btn-features {
+        width: 94%;
+    }
+
+    .grid-features {
+        grid-template-columns: 1fr;
+        width: 100%;
+        height: 100%;
+        margin-top: 2em;
+        position: relative;
+    }
+
+    .left {
+        justify-content: flex-end;
+    }
 }
