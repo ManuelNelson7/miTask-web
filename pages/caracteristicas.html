@@ -6,68 +6,92 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="../img/Favicon.svg" type="image/x-icon">
 <script src="https://kit.fontawesome.com/ceabe9f5f3.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="../styles/main.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="../styles/bootstrap.css">
 <title>miTask</title>
 </head>
 
 <body>
-    <header>
-        <div class="container-header">
-            <i id="menu" class="fas fa-bars" onclick="showMenu()"></i>
-            <a href="../index.html"><img class="logo" src="../img/Logo.svg" alt="Logo"></a>
-            <ul id="links-menu" class="links-header">
-                <li><a href="./caracteristicas.html">Características</a></li>
-                <li><a href="./precios.html">Precios</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-            </ul>
-            <i id="user" class="fas fa-user" onclick="showButtons()"></i>
-            <div id="buttons-menu" class="buttons-header">
-                <a class="btn green" href="./login.html">Acceder</a>
-                <a class="btn dark" href="./sign-up.html">Registrarse</a>
+    <header class="py-2">
+        <nav class="navbar navbar-expand-lg navbar-light w-100 p-0">
+            <div id="container-header" class="container-fluid p-0">
+                <a class="navbar-brand" href="../index.html"><img class="logo h-25" src="../img/Logo.svg" alt="Logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span><i class="fas fa-bars" style="font-size: 1.2em; color: #000"></i></span>
+                </button>
+                <div class="collapse navbar-collapse d-lg-flex justify-content-between" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./caracteristicas.html">Características</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./precios.html">Precios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+    
+                    <ul class="navbar-nav gap-2">
+                        <li class="nav-item">
+                            <a class="btn btn-success cursor" href="./login.html">Acceder</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary" href="./sign-up.html">Registrarse</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
+        </nav>
     </header>
 
     <main>
-        <section id="caracteristicas">
+        <section id="caracteristicas" class="container-fluid">
 
-            <div class="grid-50">
+            <div class="w-90 row">
 
-                <div class="text-features">
+                <div class="col-4 text-features">
                     <h3>¿Por qué usar miTask?</h3>
-                    <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed. L orem ipsum dolor sit amet,
+                    <h6 class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed. L orem ipsum dolor sit amet,
                         consectetur adipiscing elit, sed.</h6>
-                    <a class="btn blue" id="btn-features" href="./sign-up.html">Empieza ahora</a>
+                    <a class="mt-3 btn btn-primary" id="btn-features" href="./sign-up.html">Empieza ahora</a>
                 </div>
 
-                <div class="grid-features">
+                <div class="col">
 
-                    <div class="feature">
-                        <div class="icon-feature">
+                    <div class="row justify-content-center">
+
+                        <div class="feature col-2">
+                            <div class="icon-feature">
+                            </div>
+                            <span>Lorem título</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed. Lorem</p>
                         </div>
-                        <span>Lorem título</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed. Lorem</p>
+    
+                        <div class="feature col-2">
+                            <div class="icon-feature">
+                            </div>
+                            <span>Lorem título</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed. Lorem</p>
+                        </div>
                     </div>
 
-                    <div class="feature left">
-                        <div class="icon-feature">
+                    <div class="row justify-content-center mt-5">
+                        <div class="feature col-2">
+                            <div class="icon-feature">
+                            </div>
+                            <span>Lorem título</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed. Lorem</p>
                         </div>
-                        <span>Lorem título</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed. Lorem</p>
-                    </div>
-
-                    <div class="feature">
-                        <div class="icon-feature">
+    
+                        <div class="feature col-2">
+                            <div class="icon-feature">
+                            </div>
+                            <span>Lorem título</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed. Lorem</p>
                         </div>
-                        <span>Lorem título</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed. Lorem</p>
-                    </div>
-
-                    <div class="feature left">
-                        <div class="icon-feature">
-                        </div>
-                        <span>Lorem título</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed. Lorem</p>
                     </div>
                 </div>
 
