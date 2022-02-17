@@ -5,3 +5,12 @@ function showMenu() {
 function showButtons() {
     document.getElementById('buttons-menu').classList.toggle('buttons-show')
 };
+
+const scrollTrigger = 80;
+const header = document.querySelector('header');
+
+window.onscroll = () => {
+    window.scrollY >= scrollTrigger ?
+    header.classList.add('scrolled') :
+    header.classList.remove('scrolled');
+};
