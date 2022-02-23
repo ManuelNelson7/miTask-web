@@ -1,0 +1,58 @@
+/*Estilos que defino previamente para hacer mi propio pseudo-framework*/
+
+.btn-full {
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 14px;
+    transition: ease-in-out 0.3s;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    text-decoration: none;
+    color: #f9f9f9;
+    font-weight: 600;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 13px;
+    transition: ease-in-out 0.3s;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.green {
+    background-color: $accent-green;
+}
+
+.green:hover {
+    background-color: #127760;
+}
+
+.dark {
+    background-color: $dark;
+}
+
+.dark:hover {
+    background-color: $accent-blue;
+}
+
+.light-blue {
+    background-color: $light-blue;
+}
+
+.light-blue:hover {
+    background-color: $accent-blue;
+}
+
+.yellow {
+    background-color: #e58c0713;
+    color: #977318;
+}
+
+.blue {
+    background-color: $accent-blue;
+}

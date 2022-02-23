@@ -1,0 +1,52 @@
+@keyframes iphone {
+    from {
+        margin-right: 0%;
+    }
+
+    25% {
+        margin-right: 63%;
+    }
+
+    50% {
+        margin-right: 0%;
+    }
+
+    75% {
+        margin-right: 63%;
+    }
+
+    to {
+        margin-right: 0%;
+    }
+}
+
+@keyframes ipad {
+    from {
+        margin-left: 0%;
+    }
+
+    25% {
+        margin-left: 40%;
+    }
+
+    50% {
+        margin-left: 0%;
+        z-index: 4;
+    }
+
+    56% {
+        z-index: 1;
+    }
+
+    75% {
+        margin-left: 40%;
+    }
+
+    90% {
+        z-index: 4;
+    }
+
+    to {
+        margin-left: 0%;
+    }
+}
