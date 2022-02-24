@@ -1,0 +1,112 @@
+.container-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    #home {
+        display: flex;
+        min-height: 92vh;
+        margin-top: 5em;
+
+        .hero-text {
+            color: $dark;
+            margin-top: 8rem;
+
+            .hero-text h5 {
+                margin-top: 1em;
+            }
+
+            .hero-form {
+                margin-top: 1.5em;
+                display: flex;
+                width: 25rem;
+                height: 2.8rem;
+                border-radius: 20px;
+                filter: drop-shadow(0px 6px 18px rgba(0, 0, 0, 0.08));
+
+                input {
+                    border: none;
+                    background-color: #fff;
+                    border-radius: 16px 0 0 16px;
+                    padding: 1em;
+                    font-size: 0.9em;
+                    width: 17rem;
+
+                    &:focus-visible {
+                        border: none;
+                    }
+                }
+
+                button {
+                    border: none;
+                    background-color: $dark;
+                    color: #fff;
+                    font-size: 0.9em;
+                    font-weight: 600;
+                    border-radius: 0 12px 12px 0;
+                    cursor: pointer;
+                    transition: ease-in-out 0.2s;
+                    width: 8rem;
+
+                    &:hover {
+                        background-color: $accent-blue;
+                    }
+                }
+            }
+        }
+
+        #hero-mobile {
+            display: none;
+        }
+
+        #hero-desktop {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 55rem;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container-hero {
+        #home {
+            margin-top: 3em;
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+            width: 100vw;
+
+            .hero-text {
+                margin-top: 4em;
+
+                .hero-text h5 {
+                    margin-top: 1.2em;
+                }
+
+                .hero-form {
+                    height: 2.5rem;
+                    width: 20rem;
+                    filter: drop-shadow(0px 6px 19px rgba(0, 0, 0, 0.1));
+                }
+
+                button {
+                    font-weight: 500;
+                    font-size: 0.8em;
+                }
+            }
+
+            #hero-desktop {
+                display: none;
+            }
+
+            #hero-mobile {
+                display: flex;
+                height: 28rem;
+                position: absolute;
+                top: 18em;
+                right: 0.1em;
+            }
+        }
+    }
+}

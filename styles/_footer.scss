@@ -1,0 +1,94 @@
+footer {
+    background-color: $dark;
+    display: flex;
+    justify-content: center;
+
+    .footer-container {
+        width: 92%;
+        padding: 2.5em 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo-white {
+            filter: brightness(20);
+            transition: ease-in-out 0.25s;
+            &:hover {
+                filter: brightness(1.1);
+            }
+        }
+
+        .links-footer {
+            display: flex;
+            gap: 25px;
+
+            a {
+                text-decoration: none;
+                color: #f9f9f9;
+                font-size: 1em;
+                transition: ease-in-out 0.25s;
+
+                &:hover {
+                    color: $accent-green;
+                }
+            }
+        }
+
+        .social-footer {
+            display: flex;
+            gap: 25px;
+
+            a {
+                text-decoration: none;
+                color: #f9f9f9;
+                font-size: 1.5em;
+                transition: ease-in-out 0.2s;
+
+                &:hover {
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer {
+        display: flex;
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 2fr;
+            grid-template-areas: "logo social" "links social";
+            row-gap: 0.5em;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 1em 0;
+            width: 85%;
+
+            .logo-white {
+                grid-area: logo;
+
+                &#footer-logo {
+                    height: 1.8rem;
+                }
+            }
+
+            .links-footer {
+                flex-direction: column;
+                grid-area: links;
+                gap: 10px;
+            }
+
+            .social-footer {
+                grid-area: social;
+                justify-content: flex-end;
+
+                a {
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+}

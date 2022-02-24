@@ -58,3 +58,62 @@ header {
         }
     }
 }
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 0.4em 0;
+        background-color: white;
+
+        .container-header {
+            width: 85%;
+            #menu,
+            #user {
+                display: flex;
+                font-size: 1.5em;
+                cursor: pointer;
+                color: $dark;
+            }
+
+            .logo {
+                height: 2.2em;
+            }
+
+            .links-header {
+                display: none;
+            }
+
+            .links-show {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                gap: 15px;
+                top: 3em;
+                right: 0;
+                background-color: white;
+                width: 100%;
+                padding: 10px 1.5em;
+            }
+
+            .buttons-header {
+                display: none;
+            }
+
+            .buttons-show {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                align-items: center;
+                justify-content: center;
+                top: 3em;
+                right: 0;
+                background-color: white;
+                padding: 10px 1.5em;
+                width: 100%;
+            }
+
+            .btn {
+                width: 10em;
+            }
+        }
+    }
+}

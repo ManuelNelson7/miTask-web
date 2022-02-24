@@ -1,0 +1,91 @@
+#download {
+    margin-top: 12vh;
+    display: flex;
+    justify-content: space-between;
+
+    .text-download {
+        order: 2;
+        color: $dark;
+
+        h2 {
+            margin-right: 2em;
+            margin-top: 1.5em;
+        }
+
+        .buttons-download {
+            display: flex;
+            gap: 1em;
+            margin-top: 2em;
+        }
+
+        .xl {
+            font-size: 1.3em;
+            padding: 10px 1.5em;
+        }
+    }
+
+    .img-download {
+        order: 1;
+        transition: ease-in-out 0.3s;
+        display: flex;
+        position: relative;
+        width: 42rem;
+        height: 30rem;
+
+        img {
+            height: 30rem;
+            padding-bottom: 1em;
+
+            &#ipad {
+                position: absolute;
+                left: 0;
+                animation-duration: 8s;
+                animation-name: ipad;
+                animation-iteration-count: infinite;
+            }
+
+            &#iphone {
+                height: 32rem;
+                translate: 0% -10%;
+                margin-left: -2em;
+                animation-duration: 8s;
+                animation-name: iphone;
+                animation-iteration-count: infinite;
+                position: absolute;
+                z-index: 2;
+                right: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #download {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1em;
+        align-items: center;
+        padding-bottom: 2em;
+
+        .text-download {
+            h2 {
+                font-size: 1.8rem;
+                text-align: center;
+                width: 100%;
+            }
+
+            .buttons-download {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .xl {
+                width: 11em;
+            }
+        }
+
+        .img-download {
+            display: none;
+        }
+    }
+}

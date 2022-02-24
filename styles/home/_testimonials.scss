@@ -1,0 +1,120 @@
+#testimonials {
+    margin-top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $dark;
+
+    h2 {
+        font-size: 2.8rem;
+    }
+
+    h6 {
+        font-size: 1rem;
+        font-weight: normal;
+        margin-top: 1.5em;
+    }
+
+    .grid-testimonials {
+        display: grid;
+        grid-template-columns: repeat(4, 20em);
+        gap: 3em;
+        justify-content: center;
+        width: 100%;
+        margin-top: 3em;
+
+        .testimonial {
+            display: flex;
+            justify-content: center;
+            width: 20em;
+            background: #f9f9f9;
+            box-shadow: 3px 4px 18px rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: ease-in-out 0.3s;
+
+            &:hover {
+                transform: scale(1.03);
+            }
+
+            .container-testimonial {
+                width: 80%;
+                padding: 2em 0 3.5em 0;
+                display: flex;
+                flex-direction: column;
+
+                .avatar {
+                    height: 3.5em;
+                    width: 3.5em;
+                }
+
+                span {
+                    font-size: 1.4em;
+                    font-weight: 600;
+                    margin-top: 0.5em;
+                }
+
+                .stars {
+                    height: 1.4em;
+                    width: 7em;
+                    margin-top: 3px;
+                }
+
+                p {
+                    font-size: 1em;
+                    font-weight: normal;
+                    margin-top: 0.8em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #testimonials {
+        display: flex;
+        margin-top: 1em;
+
+        h2 {
+            font-size: 1.8rem;
+            width: 80%;
+            text-align: center;
+        }
+
+        h6 {
+            text-align: center;
+        }
+
+        .grid-testimonials {
+            grid-template-columns: auto;
+            gap: 2em;
+
+            .testimonial {
+                width: 18em;
+
+                .container-testimonial {
+                    padding-bottom: 2em;
+
+                    .avatar {
+                        height: 3em;
+                        width: 3em;
+                    }
+
+                    span {
+                        font-size: 1.2em;
+                    }
+
+                    .stars {
+                        height: 1.2em;
+                        width: 6em;
+                    }
+                }
+
+                &.sm-hide {
+                    display: none;
+                }
+            }
+        }
+    }
+}
