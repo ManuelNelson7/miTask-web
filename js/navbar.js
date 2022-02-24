@@ -14,3 +14,7 @@ window.onscroll = () => {
     header.classList.add('scrolled') :
     header.classList.remove('scrolled');
 };
+
+let a = 5
+console.log(a++);
+console.log(++a);

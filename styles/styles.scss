@@ -5,6 +5,7 @@
 @import "./parameters";
 @import "./framework";
 @import "./animations";
+@import "./header";
 
 * {
     margin: 0;
@@ -16,7 +17,7 @@
 
 /*------Header-------*/
 
-@import "./header";
+
 
 /*------Main-------*/
 
@@ -800,7 +801,7 @@ props anteriores*/
 
     header {
         padding: 0.4em 0;
-        background-color: white;
+        background-color: red;
     }
 
     .container-header {
@@ -931,6 +932,7 @@ props anteriores*/
     #testimonials {
         display: flex;
         margin-top: 1em;
+        display: none;
     }
 
     #testimonials h2 {
