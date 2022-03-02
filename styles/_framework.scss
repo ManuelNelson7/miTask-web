@@ -24,24 +24,30 @@
     cursor: pointer;
 }
 
-.green {
-    background-color: $accent-green;
+$colors: (
+    green: $accent-green,
+    dark: $dark,
+    light-blue: $light-blue,
+    blue: $accent-blue,
+);
+
+@each $name-color, $bgcolor in $colors {
+    .#{$name-color} {
+        background-color: $bgcolor;
+    }
+}
+
+@mixin flex($justify, $align) {
+    justify-content: $justify;
+    align-items: $align;
 }
 
 .green:hover {
     background-color: #127760;
 }
 
-.dark {
-    background-color: $dark;
-}
-
 .dark:hover {
     background-color: $accent-blue;
-}
-
-.light-blue {
-    background-color: $light-blue;
 }
 
 .light-blue:hover {
@@ -51,8 +57,4 @@
 .yellow {
     background-color: #e58c0713;
     color: #977318;
-}
-
-.blue {
-    background-color: $accent-blue;
 }

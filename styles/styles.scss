@@ -5,7 +5,6 @@
 @import "./parameters";
 @import "./framework";
 @import "./animations";
-@import "./header";
 
 * {
     margin: 0;
@@ -16,6 +15,8 @@
 }
 
 /*------Header-------*/
+
+@import "./header";
 
 /*------Main-------*/
 
@@ -36,296 +37,23 @@ main {
     @import "./home/download";
 }
 
-
-
 /*------Footer-------*/
 
 @import "./footer";
 
 /*--------------------------------- PRICING ---------------------------------------*/
 
-.pricing {
-    min-height: 95vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-/*Banner*/
-
-.banner-pricing {
-    height: 20em;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    background: linear-gradient(187.36deg, #193b97 5.72%, #4871e0 94.82%);
-    margin-top: 5em;
-    color: #f9f9f9;
-    z-index: 2;
-}
-
-.banner-pricing span {
-    margin-top: 1em;
-    color: $light-gray;
-}
-
-.banner-pricing h3 {
-    font-weight: 500;
-    text-align: center;
-    font-variant: normal;
-    margin-top: 0.4em;
-}
-
-.banner-pricing p {
-    font-size: 1em;
-    font-weight: normal;
-    margin-top: 1.5em;
-    width: 70%;
-    text-align: center;
-}
-
-/*Grid pricing*/
-
-.grid-pricing {
-    display: grid;
-    grid-template-columns: repeat(3, 22em);
-    justify-content: center;
-    align-items: flex-end;
-    width: 100%;
-    gap: 1.5em;
-    padding-bottom: 4em;
-}
-
-.plan {
-    width: 22em;
-    height: 31em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    box-shadow: 0px 4px 13px -1px rgba(0, 0, 0, 0.1);
-    border-radius: 18px;
-    color: $dark;
-    transition: ease-in-out 0.2s;
-
-    margin-top: -4em;
-}
-
-#pro:hover {
-    transform: scale(1.01);
-}
-
-#pro {
-    z-index: 3;
-    height: 34em;
-    background-color: #fff;
-    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
-}
-
-.container-plan {
-    display: flex;
-    flex-direction: column;
-    width: 83%;
-    position: relative;
-    padding: 2em 0em 7em 0em;
-    height: 100%;
-}
-
-#pro .container-plan {
-    padding: 5em 0em 7em 0em;
-}
-
-.plan p {
-    margin-top: 0.5em;
-}
-
-.plan a {
-    margin-top: 1.5em;
-}
-
-.plan ul {
-    list-style: none;
-    margin-top: 1.5em;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5em;
-}
-
-.plan ul li::before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f00c";
-    margin-right: 5px;
-    color: $light-blue;
-}
-
-.item-none {
-    color: #c2c2c2;
-    text-decoration: line-through;
-}
-
-/*No entiendo por qué es necesario el important del 
-siguiente bloque, si no lo pongo, sigue tomando las 
-props anteriores*/
-
-.item-none::before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 1.2em;
-    content: "\f00d" !important;
-    margin-right: 5px;
-    color: $light-gray !important;
-    z-index: 200;
-}
-
-#enterprise {
-    margin-top: 1.2em;
-}
-
-.price {
-    position: absolute;
-    bottom: 2.5em;
-    font-size: 1.6rem;
-    line-height: 5px;
-    font-weight: 600;
-}
-
-.price span {
-    color: $light-blue;
-}
-
-.email {
-    font-size: 1.5rem;
-    bottom: 2.7em;
-    color: $dark;
-}
-
-#popular {
-    text-transform: uppercase;
-    font-size: 0.85em;
-    position: absolute;
-    top: 1em;
-}
-
-#popular {
-    text-transform: uppercase;
-}
+@import "./pricing";
 
 /*--------------------------------- LOGIN ---------------------------------------*/
 
-#grid-form {
-    margin-top: 5em;
-    min-height: 93vh;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
-
-.background-50 {
-    background-image: url(../img/login-bg.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-/*Parte Login*/
-.sign {
-    display: flex;
-    justify-content: center;
-}
-
-.container-sign {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: 65%;
-    max-width: 25em;
-    height: 85%;
-    color: $dark;
-}
-
-.container-sign img {
-    height: 2.5em;
-}
-
-.container-sign h4 {
-    font-size: 2rem;
-    margin-top: 0.8em;
-}
-
-.container-sign span {
-    margin-top: 1.5em;
-    font-size: 0.9em;
-}
-
-.container-sign a {
-    color: $accent-blue;
-    font-weight: 600;
-}
-
-/*FORM*/
-
-.form-sign {
-    margin-top: 1.5em;
-    display: flex;
-    flex-direction: column;
-    gap: 1.6em;
-    width: 100%;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group label {
-    font-weight: 500;
-    font-size: 1em;
-}
-
-.form-group input {
-    border: none;
-    padding: 11px 15px;
-    border: 2px solid #c2c2c270;
-    border-radius: 12px;
-    width: 100%;
-    margin-top: 0.5em;
-}
-
-.btn-sign {
-    border: none;
-    padding: 13px 0;
-    cursor: pointer;
-    font-weight: 600;
-    filter: drop-shadow(0px 6px 17px rgba(0, 0, 0, 0.25));
-}
-
-.google {
-    background-color: #fff;
-    color: gray;
-    display: flex;
-    align-items: center;
-    gap: 1em;
-    border: none;
-    cursor: pointer;
-    filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.068));
-}
-
-.google img {
-    height: 1.5em;
-}
+@import "./login";
 
 /*--------------------------------- SIGN-UP ---------------------------------------*/
+
 #bg-signup {
     background-image: url(../img/signup-bg.jpg);
     background-position: top;
-}
-
-#btn-signup {
-    border: none;
-    filter: drop-shadow(0px 6px 17px rgba(0, 0, 0, 0.25));
 }
 
 #link-signup {
@@ -334,126 +62,7 @@ props anteriores*/
 
 /*--------------------------------- CONTACTO ---------------------------------------*/
 
-/*No está definido el fondo, queda muy vacío*/
-
-#contacto {
-    margin-top: 5em;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    min-height: 95vh;
-    background: linear-gradient(187.36deg, #193b97 5.72%, #4871e0 94.82%);
-}
-
-.container-contacto {
-    display: flex;
-    width: 92%;
-    justify-content: center;
-    align-items: center;
-}
-
-.card {
-    width: 100%;
-    max-width: 70em;
-    display: flex;
-    justify-content: space-between;
-    height: 29em;
-    background-color: white;
-    border-radius: 20px;
-    padding: 2em 2.5em;
-}
-
-/*Texto de la tarjeta*/
-
-.text-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    width: 25em;
-    color: $dark;
-}
-
-.text-card p {
-    width: 70%;
-    color: $accent-blue;
-    margin-top: 1em;
-}
-
-.text-card ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5em;
-    font-size: 1.1em;
-}
-
-.text-card ul li {
-    color: $accent-blue;
-    font-weight: 500;
-}
-
-.text-card ul li a {
-    text-decoration: none;
-    color: $accent-blue;
-    font-weight: 500;
-}
-
-.social-contact {
-    display: flex;
-    gap: 1.5em;
-}
-
-.social-contact a {
-    transition: ease-in-out 0.2s;
-}
-
-.social-contact a:hover {
-    transform: translateY(-5px);
-}
-
-.social-contact a {
-    text-decoration: none;
-    color: $dark;
-}
-
-.social-contact i {
-    font-size: 1.5em;
-}
-
-/*Contact card*/
-.contact-card {
-    display: flex;
-    justify-content: center;
-    padding: 0.5em 0;
-    width: 25em;
-    border-radius: 12px;
-}
-
-.container-form {
-    width: 90%;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
-
-.contact-form textarea {
-    border: 2px solid #c2c2c270;
-    border-radius: 12px;
-    resize: none;
-    padding: 10px;
-    font-family: roboto;
-    font-size: 0.8em;
-}
-
-.contact-form button {
-    padding: 10px 0;
-    display: flex;
-    filter: drop-shadow(0px 6px 17px rgba(0, 0, 0, 0.25));
-}
+@import "./contacto";
 
 /*--------------------------------- CARACTERÍSTICAS ---------------------------------------*/
 #caracteristicas {
@@ -673,7 +282,6 @@ props anteriores*/
         min-height: 100vh;
     }
 
-
     /*--------------------------------- PRICING ---------------------------------------*/
 
     .banner-pricing {
@@ -731,46 +339,6 @@ props anteriores*/
     }
 
     /*--------------------------------- LOGIN ---------------------------------------*/
-    #grid-form {
-        margin-top: 3em;
-        grid-template-columns: 1fr;
-        min-height: 95vh;
-    }
-
-    .background-50 {
-        display: none;
-    }
-
-    .container-sign {
-        width: 75%;
-    }
-
-    /*--------------------------------- CONTACTO ---------------------------------------*/
-
-    #contacto {
-        margin-top: 3em;
-    }
-
-    .container-contacto {
-        width: 100%;
-    }
-
-    .card {
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .text-card {
-        width: 95%;
-    }
-
-    .contact-card {
-        width: 95%;
-        margin-top: 1em;
-    }
 
     /*--------------------------------- CARACTERÍSTICAS ---------------------------------------*/
 

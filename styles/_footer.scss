@@ -7,8 +7,7 @@ footer {
         width: 92%;
         padding: 2.5em 0;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flex(space-between, center);
 
         .logo-white {
             filter: brightness(20);
@@ -62,8 +61,7 @@ footer {
             grid-template-rows: 1fr 2fr;
             grid-template-areas: "logo social" "links social";
             row-gap: 0.5em;
-            align-items: flex-start;
-            justify-content: space-between;
+            @include flex(space-between, flex-start);
             padding: 1em 0;
             width: 85%;
 

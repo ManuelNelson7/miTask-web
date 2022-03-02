@@ -101,20 +101,24 @@ h5 {
   background-color: #189779;
 }
 
-.green:hover {
-  background-color: #127760;
-}
-
 .dark {
   background-color: #010f34;
 }
 
-.dark:hover {
+.light-blue {
+  background-color: rgba(25, 59, 151, 0.8);
+}
+
+.blue {
   background-color: #193b97;
 }
 
-.light-blue {
-  background-color: rgba(25, 59, 151, 0.8);
+.green:hover {
+  background-color: #127760;
+}
+
+.dark:hover {
+  background-color: #193b97;
 }
 
 .light-blue:hover {
@@ -124,10 +128,6 @@ h5 {
 .yellow {
   background-color: #e58c0713;
   color: #977318;
-}
-
-.blue {
-  background-color: #193b97;
 }
 
 @-webkit-keyframes iphone {
@@ -216,6 +216,16 @@ h5 {
   }
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-margin-top: 5em;
+}
+
+/*------Header-------*/
 header {
   width: 100%;
   display: -webkit-box;
@@ -347,12 +357,12 @@ header .container-header .buttons-header {
         -ms-flex-direction: column;
             flex-direction: column;
     position: absolute;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     top: 3em;
     right: 0;
     background-color: white;
@@ -364,16 +374,6 @@ header .container-header .buttons-header {
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  scroll-behavior: smooth;
-  scroll-margin-top: 5em;
-}
-
-/*------Header-------*/
 /*------Main-------*/
 main {
   display: -webkit-box;
@@ -873,12 +873,12 @@ footer .footer-container .social-footer a:hover {
         grid-template-rows: 1fr 2fr;
         grid-template-areas: "logo social" "links social";
     row-gap: 0.5em;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     padding: 1em 0;
     width: 85%;
   }
@@ -932,8 +932,7 @@ footer .footer-container .social-footer a:hover {
           align-items: center;
 }
 
-/*Banner*/
-.banner-pricing {
+.pricing .banner-pricing {
   height: 20em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -952,19 +951,19 @@ footer .footer-container .social-footer a:hover {
   z-index: 2;
 }
 
-.banner-pricing span {
+.pricing .banner-pricing span {
   margin-top: 1em;
   color: #c2c2c2;
 }
 
-.banner-pricing h3 {
+.pricing .banner-pricing h3 {
   font-weight: 500;
   text-align: center;
   font-variant: normal;
   margin-top: 0.4em;
 }
 
-.banner-pricing p {
+.pricing .banner-pricing p {
   font-size: 1em;
   font-weight: normal;
   margin-top: 1.5em;
@@ -972,8 +971,7 @@ footer .footer-container .social-footer a:hover {
   text-align: center;
 }
 
-/*Grid pricing*/
-.grid-pricing {
+.pricing .grid-pricing {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (22em)[3];
@@ -989,7 +987,7 @@ footer .footer-container .social-footer a:hover {
   padding-bottom: 4em;
 }
 
-.plan {
+.pricing .grid-pricing .plan {
   width: 22em;
   height: 31em;
   display: -webkit-box;
@@ -1012,12 +1010,7 @@ footer .footer-container .social-footer a:hover {
   margin-top: -4em;
 }
 
-#pro:hover {
-  -webkit-transform: scale(1.01);
-          transform: scale(1.01);
-}
-
-#pro {
+.pricing .grid-pricing .plan#pro {
   z-index: 3;
   height: 34em;
   background-color: #fff;
@@ -1025,7 +1018,20 @@ footer .footer-container .social-footer a:hover {
           filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
 }
 
-.container-plan {
+.pricing .grid-pricing .plan#pro:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.pricing .grid-pricing .plan#pro.container-plan {
+  padding: 5em 0em 7em 0em;
+}
+
+.pricing .grid-pricing .plan#enterprise {
+  margin-top: 1.2em;
+}
+
+.pricing .grid-pricing .plan .container-plan {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1039,19 +1045,15 @@ footer .footer-container .social-footer a:hover {
   height: 100%;
 }
 
-#pro .container-plan {
-  padding: 5em 0em 7em 0em;
-}
-
-.plan p {
+.pricing .grid-pricing .plan .container-plan p {
   margin-top: 0.5em;
 }
 
-.plan a {
+.pricing .grid-pricing .plan .container-plan a {
   margin-top: 1.5em;
 }
 
-.plan ul {
+.pricing .grid-pricing .plan .container-plan ul {
   list-style: none;
   margin-top: 1.5em;
   display: -webkit-box;
@@ -1064,7 +1066,7 @@ footer .footer-container .social-footer a:hover {
   gap: 1.5em;
 }
 
-.plan ul li::before {
+.pricing .grid-pricing .plan .container-plan ul li::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f00c";
@@ -1072,15 +1074,12 @@ footer .footer-container .social-footer a:hover {
   color: rgba(25, 59, 151, 0.8);
 }
 
-.item-none {
+.pricing .grid-pricing .plan .container-plan ul li.item-none {
   color: #c2c2c2;
   text-decoration: line-through;
 }
 
-/*No entiendo por qué es necesario el important del 
-siguiente bloque, si no lo pongo, sigue tomando las 
-props anteriores*/
-.item-none::before {
+.pricing .grid-pricing .plan .container-plan ul li.item-none::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 1.2em;
@@ -1090,11 +1089,7 @@ props anteriores*/
   z-index: 200;
 }
 
-#enterprise {
-  margin-top: 1.2em;
-}
-
-.price {
+.pricing .grid-pricing .plan .container-plan .price {
   position: absolute;
   bottom: 2.5em;
   font-size: 1.6rem;
@@ -1102,25 +1097,14 @@ props anteriores*/
   font-weight: 600;
 }
 
-.price span {
+.pricing .grid-pricing .plan .container-plan .price span {
   color: rgba(25, 59, 151, 0.8);
 }
 
-.email {
+.pricing .grid-pricing .plan .container-plan .email {
   font-size: 1.5rem;
   bottom: 2.7em;
   color: #010f34;
-}
-
-#popular {
-  text-transform: uppercase;
-  font-size: 0.85em;
-  position: absolute;
-  top: 1em;
-}
-
-#popular {
-  text-transform: uppercase;
 }
 
 /*--------------------------------- LOGIN ---------------------------------------*/
@@ -1134,14 +1118,7 @@ props anteriores*/
       grid-template-columns: 50% 50%;
 }
 
-.background-50 {
-  background-image: url(../img/login-bg.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-/*Parte Login*/
-.sign {
+#grid-form .sign {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1150,7 +1127,7 @@ props anteriores*/
           justify-content: center;
 }
 
-.container-sign {
+#grid-form .sign .container-sign {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1164,33 +1141,35 @@ props anteriores*/
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  justify-content: center;
+  align-items: flex-start;
   width: 65%;
   max-width: 25em;
   height: 85%;
   color: #010f34;
+  /*FORM*/
 }
 
-.container-sign img {
+#grid-form .sign .container-sign img {
   height: 2.5em;
 }
 
-.container-sign h4 {
+#grid-form .sign .container-sign h4 {
   font-size: 2rem;
   margin-top: 0.8em;
 }
 
-.container-sign span {
+#grid-form .sign .container-sign span {
   margin-top: 1.5em;
   font-size: 0.9em;
 }
 
-.container-sign a {
+#grid-form .sign .container-sign a {
   color: #193b97;
   font-weight: 600;
 }
 
-/*FORM*/
-.form-sign {
+#grid-form .sign .container-sign .form-sign {
   margin-top: 1.5em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1203,7 +1182,7 @@ props anteriores*/
   width: 100%;
 }
 
-.form-group {
+#grid-form .sign .container-sign .form-sign .form-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1213,12 +1192,12 @@ props anteriores*/
           flex-direction: column;
 }
 
-.form-group label {
+#grid-form .sign .container-sign .form-sign .form-group label {
   font-weight: 500;
   font-size: 1em;
 }
 
-.form-group input {
+#grid-form .sign .container-sign .form-sign .form-group input {
   border: none;
   padding: 11px 15px;
   border: 2px solid #c2c2c270;
@@ -1227,7 +1206,7 @@ props anteriores*/
   margin-top: 0.5em;
 }
 
-.btn-sign {
+#grid-form .sign .container-sign .form-sign .btn-sign {
   border: none;
   padding: 13px 0;
   cursor: pointer;
@@ -1236,7 +1215,7 @@ props anteriores*/
           filter: drop-shadow(0px 6px 17px rgba(0, 0, 0, 0.25));
 }
 
-.google {
+#grid-form .sign .container-sign .form-sign .google {
   background-color: #fff;
   color: gray;
   display: -webkit-box;
@@ -1252,8 +1231,29 @@ props anteriores*/
           filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.068));
 }
 
-.google img {
+#grid-form .sign .container-sign .form-sign .google img {
   height: 1.5em;
+}
+
+#grid-form .background-50 {
+  background-image: url(../img/login-bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 480px) {
+  #grid-form {
+    margin-top: 3em;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    min-height: 95vh;
+  }
+  #grid-form .sign .container-sign {
+    width: 75%;
+  }
+  .background-50 {
+    display: none;
+  }
 }
 
 /*--------------------------------- SIGN-UP ---------------------------------------*/
@@ -1262,18 +1262,11 @@ props anteriores*/
   background-position: top;
 }
 
-#btn-signup {
-  border: none;
-  -webkit-filter: drop-shadow(0px 6px 17px rgba(0, 0, 0, 0.25));
-          filter: drop-shadow(0px 6px 17px rgba(0, 0, 0, 0.25));
-}
-
 #link-signup {
   color: #189779;
 }
 
 /*--------------------------------- CONTACTO ---------------------------------------*/
-/*No está definido el fondo, queda muy vacío*/
 #contacto {
   margin-top: 5em;
   display: -webkit-box;
@@ -1287,7 +1280,7 @@ props anteriores*/
   background: linear-gradient(187.36deg, #193b97 5.72%, #4871e0 94.82%);
 }
 
-.container-contacto {
+#contacto .container-contacto {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1300,7 +1293,7 @@ props anteriores*/
           align-items: center;
 }
 
-.card {
+#contacto .container-contacto .card {
   width: 100%;
   max-width: 70em;
   display: -webkit-box;
@@ -1315,8 +1308,7 @@ props anteriores*/
   padding: 2em 2.5em;
 }
 
-/*Texto de la tarjeta*/
-.text-card {
+#contacto .container-contacto .card .text-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1332,13 +1324,13 @@ props anteriores*/
   color: #010f34;
 }
 
-.text-card p {
+#contacto .container-contacto .card .text-card p {
   width: 70%;
   color: #193b97;
   margin-top: 1em;
 }
 
-.text-card ul {
+#contacto .container-contacto .card .text-card ul {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1351,45 +1343,41 @@ props anteriores*/
   font-size: 1.1em;
 }
 
-.text-card ul li {
+#contacto .container-contacto .card .text-card ul li {
   color: #193b97;
   font-weight: 500;
 }
 
-.text-card ul li a {
+#contacto .container-contacto .card .text-card ul li a {
   text-decoration: none;
   color: #193b97;
   font-weight: 500;
 }
 
-.social-contact {
+#contacto .container-contacto .card .text-card .social-contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 1.5em;
 }
 
-.social-contact a {
+#contacto .container-contacto .card .text-card .social-contact a {
   -webkit-transition: ease-in-out 0.2s;
   transition: ease-in-out 0.2s;
-}
-
-.social-contact a:hover {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-}
-
-.social-contact a {
   text-decoration: none;
   color: #010f34;
 }
 
-.social-contact i {
+#contacto .container-contacto .card .text-card .social-contact a:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+#contacto .container-contacto .card .text-card .social-contact i {
   font-size: 1.5em;
 }
 
-/*Contact card*/
-.contact-card {
+#contacto .container-contacto .card .contact-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1401,11 +1389,11 @@ props anteriores*/
   border-radius: 12px;
 }
 
-.container-form {
+#contacto .container-contacto .card .contact-card .container-form {
   width: 90%;
 }
 
-.contact-form {
+#contacto .container-contacto .card .contact-card .container-form .contact-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1416,7 +1404,16 @@ props anteriores*/
   gap: 1em;
 }
 
-.contact-form textarea {
+#contacto .container-contacto .card .contact-card .container-form .contact-form .form-group input {
+  border: none;
+  padding: 11px 15px;
+  border: 2px solid #c2c2c270;
+  border-radius: 12px;
+  width: 100%;
+  margin-top: 0.5em;
+}
+
+#contacto .container-contacto .card .contact-card .container-form .contact-form textarea {
   border: 2px solid #c2c2c270;
   border-radius: 12px;
   resize: none;
@@ -1425,13 +1422,56 @@ props anteriores*/
   font-size: 0.8em;
 }
 
-.contact-form button {
+#contacto .container-contacto .card .contact-card .container-form .contact-form button {
   padding: 10px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-filter: drop-shadow(0px 6px 17px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 6px 17px rgba(0, 0, 0, 0.25));
+}
+
+@media screen and (max-width: 480px) {
+  #contacto {
+    margin-top: 3em;
+  }
+  #contacto .container-contacto {
+    width: 100%;
+  }
+  #contacto .container-contacto .card {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: transparent;
+  }
+  #contacto .container-contacto .card .text-card {
+    width: 95%;
+  }
+  #contacto .container-contacto .card .text-card h4 {
+    color: #fff;
+  }
+  #contacto .container-contacto .card .text-card p {
+    color: #fff;
+  }
+  #contacto .container-contacto .card ul li a {
+    color: #fff !important;
+  }
+  #contacto .container-contacto .card .social-contact a {
+    color: #fff !important;
+  }
+  #contacto .container-contacto .card .contact-card {
+    width: 95%;
+    margin-top: 1em;
+    padding: 1em;
+    background-color: #fff;
+  }
 }
 
 /*--------------------------------- CARACTERÍSTICAS ---------------------------------------*/
@@ -1730,44 +1770,6 @@ props anteriores*/
     gap: 1em;
   }
   /*--------------------------------- LOGIN ---------------------------------------*/
-  #grid-form {
-    margin-top: 3em;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    min-height: 95vh;
-  }
-  .background-50 {
-    display: none;
-  }
-  .container-sign {
-    width: 75%;
-  }
-  /*--------------------------------- CONTACTO ---------------------------------------*/
-  #contacto {
-    margin-top: 3em;
-  }
-  .container-contacto {
-    width: 100%;
-  }
-  .card {
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .text-card {
-    width: 95%;
-  }
-  .contact-card {
-    width: 95%;
-    margin-top: 1em;
-  }
   /*--------------------------------- CARACTERÍSTICAS ---------------------------------------*/
   #caracteristicas {
     margin-top: 5em;

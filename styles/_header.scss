@@ -1,8 +1,7 @@
 header {
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(center, center);
     padding: 1em 0;
     position: fixed;
     z-index: 20000;
@@ -21,8 +20,7 @@ header {
     .container-header {
         display: flex;
         width: 92%;
-        justify-content: space-between;
-        align-items: center;
+        @include flex(space-between, center);
 
         #menu,
         #user {
@@ -102,8 +100,7 @@ header {
                 display: flex;
                 flex-direction: column;
                 position: absolute;
-                align-items: center;
-                justify-content: center;
+                @include flex(center, center);
                 top: 3em;
                 right: 0;
                 background-color: white;
