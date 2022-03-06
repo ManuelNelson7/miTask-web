@@ -36,6 +36,11 @@ body {
   position: relative;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 button {
   font-family: "Roboto", sans-serif;
 }
@@ -310,13 +315,13 @@ header .container-header .buttons-header {
   gap: 17px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 975px) {
   header {
     padding: 0.4em 0;
     background-color: white;
   }
   header .container-header {
-    width: 85%;
+    width: 92%;
   }
   header .container-header #menu,
   header .container-header #user {
@@ -378,6 +383,12 @@ header .container-header .buttons-header {
   }
 }
 
+@media screen and (max-width: 480px) {
+  header .container-header {
+    width: 85%;
+  }
+}
+
 /*------Main-------*/
 main {
   display: -webkit-box;
@@ -435,7 +446,7 @@ main .container-hero #home .hero-text {
   margin-top: 8rem;
 }
 
-main .container-hero #home .hero-text .hero-text h5 {
+main .container-hero #home .hero-text h5 {
   margin-top: 1em;
 }
 
@@ -458,6 +469,7 @@ main .container-hero #home .hero-text .hero-form input {
   padding: 1em;
   font-size: 0.9em;
   width: 17rem;
+  font-family: roboto;
 }
 
 main .container-hero #home .hero-text .hero-form input:focus-visible {
@@ -492,6 +504,39 @@ main .container-hero #home #hero-desktop {
   height: 55rem;
 }
 
+@media screen and (max-width: 1550px) {
+  main .container-hero #home .hero-text h1 {
+    font-size: 3rem;
+  }
+  main .container-hero #home .hero-text h5 {
+    font-size: 1.1em;
+    width: 80%;
+  }
+  main .container-hero #home #hero-desktop {
+    height: 48rem;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  main .container-hero #home {
+    margin-top: 1em;
+    height: 120vh;
+    position: relative;
+  }
+  main .container-hero #home #hero-desktop {
+    display: none;
+  }
+  main .container-hero #home #hero-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 34rem;
+    position: absolute;
+    bottom: 0;
+    right: -3em;
+  }
+}
+
 @media screen and (max-width: 480px) {
   main .container-hero #home {
     margin-top: 3em;
@@ -508,7 +553,10 @@ main .container-hero #home #hero-desktop {
   main .container-hero #home .hero-text {
     margin-top: 4em;
   }
-  main .container-hero #home .hero-text .hero-text h5 {
+  main .container-hero #home .hero-text h1 {
+    font-size: 2rem;
+  }
+  main .container-hero #home .hero-text h5 {
     margin-top: 1.2em;
   }
   main .container-hero #home .hero-text .hero-form {
@@ -519,7 +567,7 @@ main .container-hero #home #hero-desktop {
   }
   main .container-hero #home .hero-text button {
     font-weight: 500;
-    font-size: 0.8em;
+    font-size: 0.75em !important;
   }
   main .container-hero #home #hero-desktop {
     display: none;
@@ -627,10 +675,41 @@ main #testimonials .grid-testimonials .testimonial .container-testimonial .stars
   margin-top: 3px;
 }
 
+main #testimonials .grid-testimonials .testimonial .container-testimonial .stars#stars-4 {
+  width: 6em;
+}
+
 main #testimonials .grid-testimonials .testimonial .container-testimonial p {
   font-size: 1em;
   font-weight: normal;
   margin-top: 0.8em;
+}
+
+@media screen and (max-width: 1550px) {
+  main #testimonials h2 {
+    font-size: 2.5rem;
+  }
+  main #testimonials h6 {
+    margin-top: 1em;
+  }
+  main #testimonials .grid-testimonials {
+    -ms-grid-columns: (19em)[4];
+        grid-template-columns: repeat(4, 19em);
+    gap: 1.5em;
+  }
+  main #testimonials .grid-testimonials .testimonial {
+    width: 19em;
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  main #testimonials h2 {
+    font-size: 2.2rem;
+  }
+  main #testimonials .grid-testimonials {
+    -ms-grid-columns: (19em)[2];
+        grid-template-columns: repeat(2, 19em);
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -753,6 +832,16 @@ main #download .img-download img#iphone {
   position: absolute;
   z-index: 2;
   right: 0;
+}
+
+@media screen and (max-width: 1550px) {
+  main #download .text-download h2 {
+    font-size: 2.6rem;
+  }
+  main .img-download {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -1787,10 +1876,6 @@ footer .footer-container .social-footer a:hover {
 
 @media screen and (max-width: 480px) {
   /*----------HOME-----------*/
-  html,
-  body {
-    overflow-x: hidden;
-  }
   h1 {
     font-size: 2rem;
   }

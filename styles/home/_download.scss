@@ -59,6 +59,20 @@
     }
 }
 
+@media screen and (max-width: 1550px) {
+
+    #download {
+        .text-download {
+            h2 {
+                font-size: 2.6rem;
+            }
+        }
+    }
+    .img-download {
+        transform: scale(0.85);
+    }
+}
+
 @media screen and (max-width: 480px) {
     #download {
         display: flex;
@@ -89,3 +103,4 @@
         }
     }
 }
+

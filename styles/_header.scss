@@ -57,13 +57,13 @@ header {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 975px) {
     header {
         padding: 0.4em 0;
         background-color: white;
 
         .container-header {
-            width: 85%;
+            width: 92%;
             #menu,
             #user {
                 display: flex;
@@ -111,6 +111,14 @@ header {
             .btn {
                 width: 10em;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        .container-header {
+            width: 85%;
         }
     }
 }

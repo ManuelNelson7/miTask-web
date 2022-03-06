@@ -39,7 +39,9 @@ main {
 
     /*------Home-------*/
     @import "./home/hero";
+
     @import "./home/testimonials";
+
     @import "./home/download";
 }
 
@@ -278,11 +280,6 @@ main {
 
 @media screen and (max-width: 480px) {
     /*----------HOME-----------*/
-
-    html,
-    body {
-        overflow-x: hidden;
-    }
 
     h1 {
         font-size: 2rem;

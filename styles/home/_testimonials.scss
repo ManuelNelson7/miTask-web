@@ -59,6 +59,10 @@
                     height: 1.4em;
                     width: 7em;
                     margin-top: 3px;
+
+                    &#stars-4 {
+                        width: 6em;
+                    }
                 }
 
                 p {
@@ -67,6 +71,39 @@
                     margin-top: 0.8em;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    #testimonials {
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        h6 {
+            margin-top: 1em;
+        }
+
+        .grid-testimonials {
+            grid-template-columns: repeat(4, 19em);
+            gap: 1.5em;
+
+            .testimonial {
+                width: 19em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    #testimonials {
+        h2 {
+            font-size: 2.2rem;
+        }
+
+        .grid-testimonials {
+            grid-template-columns: repeat(2, 19em);
         }
     }
 }
@@ -118,3 +155,5 @@
         }
     }
 }
+
+
