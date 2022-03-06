@@ -113,6 +113,10 @@ h5 {
   background-color: #193b97;
 }
 
+.blue:hover {
+  background-color: #010f34;
+}
+
 .green:hover {
   background-color: #127760;
 }
@@ -397,6 +401,12 @@ main .container-home {
       -ms-flex-pack: center;
           justify-content: center;
   width: 92%;
+}
+
+@media screen and (max-width: 480px) {
+  main .container-home {
+    width: 85%;
+  }
 }
 
 main .container-hero {
@@ -1107,6 +1117,68 @@ footer .footer-container .social-footer a:hover {
   color: #010f34;
 }
 
+@media screen and (max-width: 480px) {
+  .pricing .banner-pricing {
+    margin-top: 3em;
+    height: 18em;
+  }
+  .pricing .banner-pricing span {
+    font-size: 0.9em;
+    margin-top: 2em;
+  }
+  .pricing .banner-pricing h3 {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+  .pricing .banner-pricing p {
+    font-size: 0.9em;
+    width: 80%;
+    margin-top: 1em;
+  }
+  .pricing .grid-pricing {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 20;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: -5em;
+  }
+  .pricing .grid-pricing .plan {
+    width: 85%;
+    margin-top: 0;
+    height: 90%;
+  }
+  .pricing .grid-pricing .plan#pro {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    z-index: 1;
+  }
+  .pricing .grid-pricing .plan#basico {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .pricing .grid-pricing .plan#empresas {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .pricing .grid-pricing .plan .plan ul {
+    gap: 1em;
+  }
+}
+
 /*--------------------------------- LOGIN ---------------------------------------*/
 #grid-form {
   margin-top: 5em;
@@ -1404,6 +1476,11 @@ footer .footer-container .social-footer a:hover {
   gap: 1em;
 }
 
+#contacto .container-contacto .card .contact-card .container-form .contact-form .form-group label {
+  font-weight: 500;
+  color: #010f34;
+}
+
 #contacto .container-contacto .card .contact-card .container-form .contact-form .form-group input {
   border: none;
   padding: 11px 15px;
@@ -1517,9 +1594,9 @@ footer .footer-container .social-footer a:hover {
 }
 
 .text-features h6 {
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: normal;
-  width: 70%;
+  width: 60%;
 }
 
 #btn-features {
@@ -1547,8 +1624,22 @@ footer .footer-container .social-footer a:hover {
 .icon-feature {
   width: 5em;
   height: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: linear-gradient(153.43deg, #fff0cb 16.67%, rgba(255, 250, 237, 0) 100%);
   border-radius: 20px;
+}
+
+.icon-feature i {
+  color: #189779;
+  font-size: 1.5em;
 }
 
 .feature {
@@ -1566,6 +1657,7 @@ footer .footer-container .social-footer a:hover {
   font-weight: 600;
   font-size: 1.2em;
   color: #010f34;
+  margin: 5px 0 3px 0;
 }
 
 /*--------------------------------- MOBILE ---------------------------------------*/
@@ -1707,27 +1799,19 @@ footer .footer-container .social-footer a:hover {
     width: 80%;
   }
   body {
-    min-height: 100vh;
+    height: 100%;
   }
   /*--------------------------------- PRICING ---------------------------------------*/
-  .banner-pricing {
-    margin-top: 3em;
-    height: 18em;
+  /*--------------------------------- LOGIN ---------------------------------------*/
+  /*--------------------------------- CARACTERÍSTICAS ---------------------------------------*/
+  #caracteristicas {
+    margin-top: 5em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100vh;
   }
-  .banner-pricing span {
-    font-size: 0.9em;
-    margin-top: 2em;
-  }
-  .banner-pricing h3 {
-    font-size: 2rem;
-    margin-top: 0;
-  }
-  .banner-pricing p {
-    font-size: 0.9em;
-    width: 80%;
-    margin-top: 1em;
-  }
-  .grid-pricing {
+  .grid-50 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1735,51 +1819,6 @@ footer .footer-container .social-footer a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    z-index: 20;
-    width: 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: -5em;
-  }
-  .plan {
-    width: 85%;
-    margin-top: 0;
-    height: 90%;
-  }
-  #pro {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    z-index: 1;
-  }
-  #basico {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-  #empresas {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-  }
-  .plan ul {
-    gap: 1em;
-  }
-  /*--------------------------------- LOGIN ---------------------------------------*/
-  /*--------------------------------- CARACTERÍSTICAS ---------------------------------------*/
-  #caracteristicas {
-    margin-top: 5em;
-  }
-  .grid-50 {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     width: 85%;
   }
   .text-features {
@@ -1788,6 +1827,34 @@ footer .footer-container .social-footer a:hover {
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
+  }
+  .grid-features {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 2em;
+  }
+  .grid-features .feature {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .grid-features .feature.left {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    text-align: end;
+  }
+  .grid-features .feature p {
+    width: 60%;
   }
   .text-features h3 {
     font-size: 2.2rem;
@@ -1798,19 +1865,6 @@ footer .footer-container .social-footer a:hover {
   }
   #btn-features {
     width: 94%;
-  }
-  .grid-features {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    width: 100%;
-    height: 100%;
-    margin-top: 2em;
-    position: relative;
-  }
-  .left {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
   }
 }
 /*# sourceMappingURL=styles.css.map */

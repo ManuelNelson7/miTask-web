@@ -145,3 +145,60 @@
         }
     }
 }
+
+@media screen and (max-width: 480px) {
+    .pricing {
+        .banner-pricing {
+            margin-top: 3em;
+            height: 18em;
+
+            span {
+                font-size: 0.9em;
+                margin-top: 2em;
+            }
+
+            h3 {
+                font-size: 2rem;
+                margin-top: 0;
+            }
+
+            p {
+                font-size: 0.9em;
+                width: 80%;
+                margin-top: 1em;
+            }
+        }
+
+        .grid-pricing {
+            display: flex;
+            flex-direction: column;
+            z-index: 20;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin-top: -5em;
+
+            .plan {
+                width: 85%;
+                margin-top: 0;
+                height: 90%;
+
+                &#pro {
+                    order: 1;
+                    z-index: 1;
+                }
+                &#basico {
+                    order: 2;
+                }
+
+                &#empresas {
+                    order: 3;
+                }
+
+                .plan ul {
+                    gap: 1em;
+                }
+            }
+        }
+    }
+}

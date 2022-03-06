@@ -42,6 +42,10 @@ $colors: (
     align-items: $align;
 }
 
+.blue:hover {
+    background-color: $dark;
+}
+
 .green:hover {
     background-color: #127760;
 }

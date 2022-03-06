@@ -31,6 +31,12 @@ main {
         width: 92%;
     }
 
+    @media screen and (max-width: 480px) {
+        .container-home {
+            width: 85%;
+        }
+    }
+
     /*------Home-------*/
     @import "./home/hero";
     @import "./home/testimonials";
@@ -93,9 +99,9 @@ main {
 }
 
 .text-features h6 {
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: normal;
-    width: 70%;
+    width: 60%;
 }
 
 #btn-features {
@@ -118,8 +124,16 @@ main {
 .icon-feature {
     width: 5em;
     height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(153.43deg, #fff0cb 16.67%, rgba(255, 250, 237, 0) 100%);
     border-radius: 20px;
+
+    i {
+        color: $accent-green;
+        font-size: 1.5em;
+    }
 }
 
 .feature {
@@ -132,6 +146,7 @@ main {
     font-weight: 600;
     font-size: 1.2em;
     color: $dark;
+    margin: 5px 0 3px 0;
 }
 
 /*--------------------------------- MOBILE ---------------------------------------*/
@@ -279,64 +294,10 @@ main {
     }
 
     body {
-        min-height: 100vh;
+        height: 100%;
     }
 
     /*--------------------------------- PRICING ---------------------------------------*/
-
-    .banner-pricing {
-        margin-top: 3em;
-        height: 18em;
-    }
-
-    .banner-pricing span {
-        font-size: 0.9em;
-        margin-top: 2em;
-    }
-
-    .banner-pricing h3 {
-        font-size: 2rem;
-        margin-top: 0;
-    }
-
-    .banner-pricing p {
-        font-size: 0.9em;
-        width: 80%;
-        margin-top: 1em;
-    }
-
-    .grid-pricing {
-        display: flex;
-        flex-direction: column;
-        z-index: 20;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        margin-top: -5em;
-    }
-
-    .plan {
-        width: 85%;
-        margin-top: 0;
-        height: 90%;
-    }
-
-    #pro {
-        order: 1;
-        z-index: 1;
-    }
-
-    #basico {
-        order: 2;
-    }
-
-    #empresas {
-        order: 3;
-    }
-
-    .plan ul {
-        gap: 1em;
-    }
 
     /*--------------------------------- LOGIN ---------------------------------------*/
 
@@ -344,11 +305,13 @@ main {
 
     #caracteristicas {
         margin-top: 5em;
+        justify-content: center;
+        height: 100vh;
     }
 
     .grid-50 {
-        grid-template-columns: 1fr;
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
         width: 85%;
     }
 
@@ -356,6 +319,27 @@ main {
         text-align: center;
         align-items: center;
         width: 100%;
+    }
+
+    .grid-features {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2em;
+
+        .feature {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+
+            &.left {
+                align-items: flex-end;
+                text-align: end;
+            }
+
+            p {
+                width: 60%;
+            }
+        }
     }
 
     .text-features h3 {
@@ -369,17 +353,5 @@ main {
 
     #btn-features {
         width: 94%;
-    }
-
-    .grid-features {
-        grid-template-columns: 1fr;
-        width: 100%;
-        height: 100%;
-        margin-top: 2em;
-        position: relative;
-    }
-
-    .left {
-        justify-content: flex-end;
     }
 }

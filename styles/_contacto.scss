@@ -91,6 +91,11 @@
                         gap: 1em;
 
                         .form-group {
+                            label {
+                                font-weight: 500;
+                                color: $dark;
+                            }
+
                             input {
                                 border: none;
                                 padding: 11px 15px;
