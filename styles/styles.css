@@ -532,12 +532,13 @@ main .container-hero #home #hero-desktop {
     display: flex;
     height: 34rem;
     position: absolute;
-    bottom: 0;
+    bottom: 6em;
     right: -3em;
+    z-index: -1;
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   main .container-hero #home {
     margin-top: 3em;
     position: relative;
@@ -712,7 +713,7 @@ main #testimonials .grid-testimonials .testimonial .container-testimonial p {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 680px) {
   main #testimonials {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -844,7 +845,7 @@ main #download .img-download img#iphone {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 850px) {
   main #download {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1402,6 +1403,11 @@ footer .footer-container .social-footer a:hover {
   background-position: center;
 }
 
+#grid-form .background-50#bg-signup {
+  background-image: url(../img/signup-bg.jpg) !important;
+  background-position: top;
+}
+
 @media screen and (max-width: 480px) {
   #grid-form {
     margin-top: 3em;
@@ -1418,11 +1424,6 @@ footer .footer-container .social-footer a:hover {
 }
 
 /*--------------------------------- SIGN-UP ---------------------------------------*/
-#bg-signup {
-  background-image: url(../img/signup-bg.jpg);
-  background-position: top;
-}
-
 #link-signup {
   color: #189779;
 }
@@ -1653,7 +1654,7 @@ footer .footer-container .social-footer a:hover {
   width: 100%;
 }
 
-.grid-50 {
+#caracteristicas .grid-50 {
   width: 92%;
   display: -ms-grid;
   display: grid;
@@ -1663,7 +1664,7 @@ footer .footer-container .social-footer a:hover {
           column-gap: 10em;
 }
 
-.text-features {
+#caracteristicas .grid-50 .text-features {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1678,17 +1679,17 @@ footer .footer-container .social-footer a:hover {
   color: #010f34;
 }
 
-.text-features h3 {
+#caracteristicas .grid-50 .text-features h3 {
   width: 80%;
 }
 
-.text-features h6 {
+#caracteristicas .grid-50 .text-features h6 {
   font-size: 1.2em;
   font-weight: normal;
   width: 60%;
 }
 
-#btn-features {
+#caracteristicas .grid-50 .text-features #btn-features {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1698,8 +1699,7 @@ footer .footer-container .social-footer a:hover {
           filter: drop-shadow(0px 6px 17px rgba(0, 0, 0, 0.25));
 }
 
-/*grid-features*/
-.grid-features {
+#caracteristicas .grid-50 .grid-features {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -1710,7 +1710,25 @@ footer .footer-container .social-footer a:hover {
   height: 20em;
 }
 
-.icon-feature {
+#caracteristicas .grid-50 .grid-features .feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 15em;
+}
+
+#caracteristicas .grid-50 .grid-features .feature span {
+  font-weight: 600;
+  font-size: 1.2em;
+  color: #010f34;
+  margin: 5px 0 3px 0;
+}
+
+#caracteristicas .grid-50 .grid-features .feature .icon-feature {
   width: 5em;
   height: 5em;
   display: -webkit-box;
@@ -1726,27 +1744,106 @@ footer .footer-container .social-footer a:hover {
   border-radius: 20px;
 }
 
-.icon-feature i {
+#caracteristicas .grid-50 .grid-features .feature .icon-feature i {
   color: #189779;
   font-size: 1.5em;
 }
 
-.feature {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 15em;
+@media screen and (max-width: 1400px) {
+  #caracteristicas {
+    margin-top: 8em;
+  }
+  #caracteristicas .grid-50 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2em;
+  }
+  #caracteristicas .grid-50 .text-features h6 {
+    width: 60%;
+  }
+  #caracteristicas .grid-50 .grid-features {
+    justify-items: center;
+    width: 100%;
+  }
+  #caracteristicas .grid-50 .grid-features .feature {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
-.feature span {
-  font-weight: 600;
-  font-size: 1.2em;
-  color: #010f34;
-  margin: 5px 0 3px 0;
+@media screen and (max-width: 480px) {
+  #caracteristicas {
+    margin-top: 5em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100vh;
+  }
+  #caracteristicas .grid-50 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 85%;
+  }
+  #caracteristicas .grid-50 .text-features {
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  #caracteristicas .grid-50 .text-features h3 {
+    font-size: 2.2rem;
+    width: 100%;
+  }
+  #caracteristicas .grid-50 .text-features h6 {
+    width: 95%;
+    font-size: 1.1em;
+  }
+  #caracteristicas .grid-50 .text-features #btn-features {
+    width: 94%;
+  }
+  #caracteristicas .grid-50 .grid-features {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 2em;
+  }
+  #caracteristicas .grid-50 .grid-features .feature {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  #caracteristicas .grid-50 .grid-features .feature.left {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    text-align: end;
+  }
+  #caracteristicas .grid-50 .grid-features .feature p {
+    width: 60%;
+  }
 }
 
 /*--------------------------------- MOBILE ---------------------------------------*/
@@ -1868,10 +1965,6 @@ footer .footer-container .social-footer a:hover {
   .chevron-container {
     display: none;
   }
-  /*Illustración*/
-  #hero-desktop {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 480px) {
@@ -1885,71 +1978,6 @@ footer .footer-container .social-footer a:hover {
   }
   body {
     height: 100%;
-  }
-  /*--------------------------------- PRICING ---------------------------------------*/
-  /*--------------------------------- LOGIN ---------------------------------------*/
-  /*--------------------------------- CARACTERÍSTICAS ---------------------------------------*/
-  #caracteristicas {
-    margin-top: 5em;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 100vh;
-  }
-  .grid-50 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 85%;
-  }
-  .text-features {
-    text-align: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-  }
-  .grid-features {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-top: 2em;
-  }
-  .grid-features .feature {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .grid-features .feature.left {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    text-align: end;
-  }
-  .grid-features .feature p {
-    width: 60%;
-  }
-  .text-features h3 {
-    font-size: 2.2rem;
-    width: 100%;
-  }
-  .text-features h6 {
-    width: 95%;
-  }
-  #btn-features {
-    width: 94%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

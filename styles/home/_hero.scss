@@ -107,14 +107,15 @@
                 display: flex;
                 height: 34rem;
                 position: absolute;
-                bottom: 0;
+                bottom: 6em;
                 right: -3em;
+                z-index: -1;
             }
         }
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
     .container-hero {
         #home {
             margin-top: 3em;
