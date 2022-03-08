@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../img/Favicon.svg" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/styles.css">
     <title>miTask | Contacto</title>
 </head>
@@ -33,7 +34,7 @@
     <main>
         <div id="contacto">
 
-            <div class="container-contacto">
+            <div class="container-contacto" data-aos="fade-up">
 
                 <div class="card">
 
@@ -75,7 +76,8 @@
                                 </div>
 
 
-                                <textarea name="message" id="message" cols="1" rows="7" placeholder="Tu mensaje" required></textarea>
+                                <textarea name="message" id="message" cols="1" rows="7" placeholder="Tu mensaje"
+                                    required></textarea>
 
 
                                 <button class="btn dark" type="submit">Enviar</button>
@@ -112,6 +114,15 @@
     <script src="https://kit.fontawesome.com/ceabe9f5f3.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="../js/navbar.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            disable: function () {
+                var maxWidth = 800;
+                return window.innerWidth < maxWidth;
+            }
+        });
+    </script>
 </body>
 
 </html>

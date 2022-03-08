@@ -7,8 +7,8 @@
 <meta name="description" content="Gestor de proyectos para tu negocio a un precio increíble">
 <meta name="keywords" content="Gestor de proyectos, Monday, Asana, Clickup, Task, Organización">
 <link rel="icon" href="./img/Favicon.svg" type="image/x-icon">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="./styles/styles.css">
-<script src="https://kit.fontawesome.com/ceabe9f5f3.js" crossorigin="anonymous"></script>
 <title>miTask</title>
 </head>
 
@@ -38,7 +38,7 @@
             <div class="container-hero">
                 <section id="home">
 
-                    <div class="hero-text">
+                    <div class="hero-text" data-aos="fade-up">
                         <h1>Administra las <br> tareas de tu equipo <br> con miTask</h1>
                         <h5>Gestor de proyectos para tu negocio a un precio increíble</h5>
                         <div class="hero-form">
@@ -49,14 +49,14 @@
                         </div>
                     </div>
 
-                    <img id="hero-desktop" src="./img/hero-illustration.png" alt="miTask illustración">
-                    <img id="hero-mobile" src="./img/hero-illustration-mobile.png" alt="miTask illustración">
+                    <img id="hero-desktop" src="./img/hero-illustration.webp" alt="miTask illustración">
+                    <img id="hero-mobile" src="./img/hero-illustration-mobile.webp" alt="miTask illustración">
                 </section>
             </div>
             <!--  Termina Hero section  -->
 
             <!--  Testimonials section  -->
-            <section id="testimonials">
+            <section id="testimonials" data-aos="fade-up">
                 <h2>Simple, poderosa, útil</h2>
                 <h6>Sácale el mayor partido a miTask como nuestros clientes:</h6>
 
@@ -64,9 +64,9 @@
 
                     <div class="testimonial">
                         <div class="container-testimonial">
-                            <img class="avatar" src="./img/avatar1.png" alt="avatar-testimonial">
+                            <img class="avatar" src="./img/avatar1.webp" alt="avatar-testimonial">
                             <span>Magdalena</span>
-                            <img class="stars" src="./img/five-stars.png" alt="5 estrellas">
+                            <img class="stars" src="./img/five-stars.webp" alt="5 estrellas">
                             <p>miTask realmente ayuda con la gestión de pequeñas empresas.
                                 Trabajo en una agencia de marketing, y desde que implementamos miTask como nuestro
                                 dispositivo de comunicación hemos visto una gran reducción en la confusión, menos
@@ -76,9 +76,9 @@
 
                     <div class="testimonial">
                         <div class="container-testimonial">
-                            <img class="avatar" src="./img/avatar2.png" alt="avatar-testimonial">
+                            <img class="avatar" src="./img/avatar2.webp" alt="avatar-testimonial">
                             <span>Gerónimo</span>
-                            <img class="stars" src="./img/five-stars.png" alt="5 estrellas">
+                            <img class="stars" src="./img/five-stars.webp" alt="5 estrellas">
                             <p>Me llevo una gran experiencia como usuario de miTask, estoy a cargo de un equipo de
                                 trabajo de 45 personas, y ahora puedo controlar todas y cada una de las tareas; saco
                                 mucho provecho de la opción de reportes semanales, ya que son automáticos y me ahorra la
@@ -89,9 +89,9 @@
 
                     <div class="testimonial sm-hide">
                         <div class="container-testimonial">
-                            <img class="avatar" src="./img/avatar3.png" alt="avatar-testimonial">
+                            <img class="avatar" src="./img/avatar3.webp" alt="avatar-testimonial">
                             <span>Iván</span>
-                            <img class="stars" id="stars-4" src="./img/four-half-stars.png" alt="4 estrellas y media">
+                            <img class="stars" id="stars-4" src="./img/four-half-stars.webp" alt="4 estrellas y media">
                             <p>miTask es una herramienta extremadamente útil para utilizar como CRM, la encuentro muy
                                 útil debido a su facilidad de uso, gestión de
                                 canalización, gestión de campañas de marketing y agenda para reuniones con clientes.</p>
@@ -100,9 +100,9 @@
 
                     <div class="testimonial sm-hide">
                         <div class="container-testimonial">
-                            <img class="avatar" src="./img/avatar4.png" alt="avatar-testimonial">
+                            <img class="avatar" src="./img/avatar4.webp" alt="avatar-testimonial">
                             <span>Daniela</span>
-                            <img class="stars" src="./img/five-stars.png" alt="5 estrellas">
+                            <img class="stars" src="./img/five-stars.webp" alt="5 estrellas">
                             <p>Me encanta cómo siempre están agregando nuevas funciones y herramientas. Esta es
                                 una gran plataforma para colaborar con universidades y clientes. miTask se puede usar de
                                 varias maneras y puedes personalizar tu vista para que se ajuste al tipo de proyecto en
@@ -116,7 +116,7 @@
             <!--  Termina testimonials section   -->
 
             <!--  Download section   -->
-            <section id="download">
+            <section id="download" data-aos="fade-in">
                 <div class="text-download">
                     <h2>Visualiza tu trabajo <br> desde cualquier <br> dispositivo, en <br> tiempo real</h2>
                     <div class="buttons-download">
@@ -126,8 +126,8 @@
                 </div>
 
                 <div class="img-download">
-                    <img id="ipad" src="./img/ipad-download.png" alt="Descarga la app">
-                    <img id="iphone" src="./img/iphone-download.png" alt="Descarga la imagen">
+                    <img id="ipad" src="./img/ipad-download.webp" alt="Descarga la app">
+                    <img id="iphone" src="./img/iphone-download.webp" alt="Descarga la imagen">
                 </div>
             </section>
             <!--  Termina download section -->
@@ -156,6 +156,16 @@
     </footer>
 
     <script src="./js/navbar.js"></script>
+    <script src="https://kit.fontawesome.com/ceabe9f5f3.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            disable: function () {
+                var maxWidth = 800;
+                return window.innerWidth < maxWidth;
+            }
+        });
+    </script>
 </body>
 
 </html>

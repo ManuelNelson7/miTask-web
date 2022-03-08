@@ -94,12 +94,12 @@
     }
 
     .background-50 {
-        background-image: url(../img/login-bg.jpg);
+        background-image: url(../img/login-bg.webp);
         background-size: cover;
         background-position: center;
 
         &#bg-signup {
-            background-image: url(../img/signup-bg.jpg) !important;
+            background-image: url(../img/signup-bg.webp) !important;
             background-position: top;
         }
     }

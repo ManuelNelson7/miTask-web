@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="../img/Favicon.svg" type="image/x-icon">
 <script src="https://kit.fontawesome.com/ceabe9f5f3.js" crossorigin="anonymous"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link rel="stylesheet" href="../styles/styles.css">
 <title>miTask</title>
 </head>
@@ -30,7 +31,7 @@
     </header>
 
     <main>
-        <section id="caracteristicas">
+        <section id="caracteristicas" data-aos="fade-up">
 
             <div class="grid-50">
 
@@ -100,6 +101,15 @@
     </footer>
 
     <script src="../js/navbar.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            disable: function () {
+                var maxWidth = 800;
+                return window.innerWidth < maxWidth;
+            }
+        });
+    </script>
 </body>
 
 </html>
