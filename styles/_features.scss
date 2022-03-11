@@ -110,12 +110,13 @@
     #caracteristicas {
         margin-top: 5em;
         justify-content: center;
-        height: 100vh;
+        height: 100%;
 
         .grid-50 {
             display: flex;
             flex-direction: column;
             width: 85%;
+
 
             .text-features {
                 text-align: center;
@@ -140,7 +141,8 @@
             .grid-features {
                 display: flex;
                 flex-direction: column;
-                margin-top: 2em;
+                height: 100%;
+                margin: 2em 0;
 
                 .feature {
                     width: 100%;

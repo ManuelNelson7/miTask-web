@@ -44,8 +44,12 @@ header {
                 color: $dark;
                 transition: 0.3s;
 
+                &.active {
+                    color: $accent-blue;
+                }
+
                 &:hover {
-                    color: #193b97;
+                    color: $accent-blue;
                 }
             }
         }

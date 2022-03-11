@@ -304,6 +304,10 @@ header .container-header .links-header li a {
   transition: 0.3s;
 }
 
+header .container-header .links-header li a.active {
+  color: #193b97;
+}
+
 header .container-header .links-header li a:hover {
   color: #193b97;
 }
@@ -1447,13 +1451,13 @@ footer .footer-container .social-footer a:hover {
 }
 
 #grid-form .background-50 {
-  background-image: url(../img/login-bg.jpg);
+  background-image: url(../img/login-bg.webp);
   background-size: cover;
   background-position: center;
 }
 
 #grid-form .background-50#bg-signup {
-  background-image: url(../img/signup-bg.jpg) !important;
+  background-image: url(../img/signup-bg.webp) !important;
   background-position: top;
 }
 
@@ -1845,7 +1849,7 @@ footer .footer-container .social-footer a:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 100vh;
+    height: 100%;
   }
   #caracteristicas .grid-50 {
     display: -webkit-box;
@@ -1883,7 +1887,8 @@ footer .footer-container .social-footer a:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 2em;
+    height: 100%;
+    margin: 2em 0;
   }
   #caracteristicas .grid-50 .grid-features .feature {
     width: 100%;
