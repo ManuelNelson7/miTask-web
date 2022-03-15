@@ -4,15 +4,13 @@
 
 <p align="center">This is the landing page of miTask, an online project manager that I have in development</p>
 
+![](/screenshot.png)
+
 ## Links
 
 - [Repo](https://github.com/ManuelNelson7/miTask-web)
 
 - [Live](http://mitask.com.ar/)
-
-## Preview
-
-![](/screenshot.png)
 
 ## Built With
 
