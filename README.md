@@ -1,14 +1,8 @@
-# ✔️ miTask landing page
 
-Éste es mi proyecto final para el curso de desarrollo web en Coderhouse, aún se encuentra en mantenimiento.
 
-## Live demo
+<h1 align="center">✔️ miTask landing page</h1>
 
-- [Live Site URL](http://mitask.com.ar/)
-
-<h1 align="center"><✔️ miTask landing page></h1>
-
-<p align="center"><This is the landing page of miTask, an online project manager that I have in development></p>
+<p align="center">This is the landing page of miTask, an online project manager that I have in development</p>
 
 ## Links
 
